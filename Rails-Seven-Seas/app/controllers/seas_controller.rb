@@ -1,6 +1,8 @@
 class SeasController < ApplicationController
   #define your controller actions here
-
+  def index
+    @seas = Sea.all
+  end
 
   private
   # In controller actions, use this private method to access sea params from forms.
