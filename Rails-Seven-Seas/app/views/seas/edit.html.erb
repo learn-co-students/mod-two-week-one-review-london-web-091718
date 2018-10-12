@@ -1,28 +1,40 @@
 <%= form_for @sea do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-
+<br>
+<br>
   <%= f.label :temperature %>
   <%= f.number_field :temperature %>
-
+  <br>
+  <br>
   <%= f.label :bio %>
   <%= f.text_area :bio %>
-
+  <br>
+  <br>
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
-
+  <br>
+  <br>
   <%= f.label :mood %>
   <%= f.text_field :mood %>
-
+  <br>
+  <br>
   <%= f.label :favorite_color %>
   <%= f.text_field :favorite_color %>
-
+  <br>
+  <br>
   <%= f.label :scariest_creature %>
   <%= f.text_field :scariest_creature %>
-
+  <br>
+  <br>
   <%= f.label :has_mermaids %>
   <%= f.check_box :has_mermaids %>
-
+  <br>
+  <br>
   <%=  f.submit %>
 
+    <%= link_to 'Destroy',  @sea,  method: :delete, data: { confirm: 'Are you sure?' } %>
+  </form>
+  <br>
+  <br>
   <% end %>
