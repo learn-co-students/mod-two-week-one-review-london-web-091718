@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="text-center">
+    <img src=<%=@seas.image_url%> class="img-fluid" style="width: 40vw" alt="me">
+    <h2 class="text-center"><%= @seas.name %> </h2>
+    <p><%= @seas.bio %></p>
+    <button class="btn btn-info" style="margin: 1em"><a href="/seas/<%=@seas.id%>/edit">Edit</a></button><button class="btn btn-info" style="margin: 1em"><a href="/seas">Back</a></button>
+
+    <button class="btn btn-info" style="margin: 1em"> <%= form_for @seas, method: :delete do |f| %>
+        <%=  f.submit 'Delete', class: 'btn btn-danger' %>
+      <% end %> </button>
+
+
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item">Temperature: <%= @seas.temperature %>&#176 F</li>
+        <li class="list-group-item">Favorite Color: <%= @seas.favorite_color %></li>
+        <li class="list-group-item">Scariest Creature: <%= @seas.scariest_creature %></li>
+        <li class="list-group-item">Mood: <%= @seas.mood %></li>
+        <% if @seas.has_mermaids %>
+          <li class="list-group-item">Has Mermaids</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+
+</div>
