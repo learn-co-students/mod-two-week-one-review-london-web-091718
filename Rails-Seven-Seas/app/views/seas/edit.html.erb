@@ -25,4 +25,8 @@
 
   <%=  f.submit %>
 
-  <% end %>
+<% end %>
+
+<%= button_to 'Delete', sea_path, method: :delete %>
+<%= link_to '<button>Back</button>'.html_safe, sea_path %>
+<%= link_to '<button>All seas</button>'.html_safe, seas_path %>
